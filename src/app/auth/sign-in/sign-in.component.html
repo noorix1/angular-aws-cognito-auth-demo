@@ -7,12 +7,12 @@
     <div class="container">
       <label for="email"><b>Email address</b></label>
       <input 
+      type="text"
       name="email"
       ngModel
-      type="email"
       #emailInput="ngModel"
       [(ngModel)]="email_address"
-      email
+      
       placeholder="Enter Username" required>
   
       <label for="password"><b>Password</b></label>

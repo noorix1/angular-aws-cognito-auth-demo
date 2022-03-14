@@ -20,7 +20,9 @@ export class SignInComponent implements OnInit {
   }
 
   onSignIn(form: NgForm){
+    console.log(form.value)
     if (form.valid) {
+      
       this.isLoading = true;
       console.log(this.email_address,this.password)
       let authenticationDetails = new AuthenticationDetails({
@@ -41,6 +43,7 @@ export class SignInComponent implements OnInit {
       var cognitoUser = new CognitoUser(userData);
       cognitoUser.authenticateUser(authenticationDetails, {
         onSuccess: (result) => {
+          console.log(result.getIdToken().getJwtToken())
           this.router.navigate(["dashboard"])
         },
       

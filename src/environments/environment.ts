@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  cognitoUserPoolId: "",
-  cognitoAppClientId: "" 
+  cognitoUserPoolId: "ap-southeast-1_HBAZdOFV1",
+  cognitoAppClientId: "7204bsmoal0i9mnd21apl90qgg" 
 };
 
 /*
